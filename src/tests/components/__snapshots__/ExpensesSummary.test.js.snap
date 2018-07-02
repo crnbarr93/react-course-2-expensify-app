@@ -2,11 +2,11 @@
 
 exports[`should render ExpensesSummary correctly 1`] = `
 <div>
-  <p>
-    3
-  </p>
-  <p>
-    $1,141.95
-  </p>
+  <h1>
+    Viewing 
+     
+    expenses
+     totalling 
+  </h1>
 </div>
 `;

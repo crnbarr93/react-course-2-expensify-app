@@ -3,7 +3,8 @@
 exports[`should render ExpenseList with empty expenses 1`] = `
 <div>
   <Component
-    expenses={Array []}
+    expensesCount={0}
+    expensesTotal={0}
   />
   <p>
     No expenses
@@ -14,31 +15,8 @@ exports[`should render ExpenseList with empty expenses 1`] = `
 exports[`should render ExpenseList with expenses 1`] = `
 <div>
   <Component
-    expenses={
-      Array [
-        Object {
-          "amount": 195,
-          "createdAt": 0,
-          "description": "Gum",
-          "id": "1",
-          "note": "",
-        },
-        Object {
-          "amount": 109500,
-          "createdAt": -345600000,
-          "description": "Rent",
-          "id": "2",
-          "note": "",
-        },
-        Object {
-          "amount": 4500,
-          "createdAt": 345600000,
-          "description": "Credit Card",
-          "id": "3",
-          "note": "",
-        },
-      ]
-    }
+    expensesCount={3}
+    expensesTotal={114195}
   />
   <ExpenseListItem
     amount={195}

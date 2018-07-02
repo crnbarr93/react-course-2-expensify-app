@@ -2,11 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
-import ExpensesSummary from './ExpensesSummary';
+import selectExpensesTotal from '../selectors/expenses-total';
 
 export const ExpenseList = (props) => (
   <div>
-    <ExpensesSummary expenses={props.expenses} />
     {
       props.expenses.length === 0 ? (
         <p>No expenses</p>
