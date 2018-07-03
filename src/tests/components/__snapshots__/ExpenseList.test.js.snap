@@ -2,10 +2,6 @@
 
 exports[`should render ExpenseList with empty expenses 1`] = `
 <div>
-  <Component
-    expensesCount={0}
-    expensesTotal={0}
-  />
   <p>
     No expenses
   </p>
@@ -14,10 +10,6 @@ exports[`should render ExpenseList with empty expenses 1`] = `
 
 exports[`should render ExpenseList with expenses 1`] = `
 <div>
-  <Component
-    expensesCount={3}
-    expensesTotal={114195}
-  />
   <ExpenseListItem
     amount={195}
     createdAt={0}
