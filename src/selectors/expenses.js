@@ -17,4 +17,14 @@ const getVisibleExpense = (expenses, { text, sortBy, startDate, endDate }) => {
   });
 };
 
+export const getState = (state) => {
+  console.log('From selector', state);
+  return state;
+}
+
+export const getUid = (state) =>
+{
+  return state.auth.uid;
+}
+
 export default getVisibleExpense;
