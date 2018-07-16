@@ -2,7 +2,6 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import expensesReducer from '../reducers/expenses';
 import filtersReducer from '../reducers/filters';
 import authReducer from '../reducers/auth';
-import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 import expenseSaga from '../sagas/expenses';
 
@@ -17,7 +16,6 @@ export default () => {
       filters: filtersReducer,
       auth: authReducer
     }),
-    // composeEnhancers(applyMiddleware(thunk)),
     composeEnhancers(applyMiddleware(sagaMiddleware))
   );
   sagaMiddleware.run(expenseSaga);

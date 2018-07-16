@@ -10,7 +10,7 @@ const addExpense = (expense) => ({
   expense
 });
 
-function* startAddExpense(action) {
+export function* startAddExpense(action) {
     const uid = yield select(getUid);
     const expenseData = action.expense;
     const expense = {
@@ -40,7 +40,7 @@ const removeExpense = ({ id }) => ({
   id
 });
 
-function* startRemoveExpense({ id } = {}) {
+export function* startRemoveExpense({ id } = {}) {
   const uid = yield select(getUid);
 
   yield call((_uid, _id) => {
@@ -63,7 +63,7 @@ const editExpense = (id, updates) => ({
   updates
 });
 
-function* startEditExpense(action) {
+export function* startEditExpense(action) {
   const uid = yield select(getUid);
   const result = yield call((_uid, _id, _updates) => {
     return database.ref(`users/${_uid}/expenses/${_id}`).update(_updates).then((snapshot) => {
@@ -84,7 +84,7 @@ export const setExpenses = (expenses) => ({
   expenses
 });
 
-function* startSetExpenses() {
+export function* startSetExpenses() {
   const uid = yield select(getUid);
 
   const result = yield call((_uid) => {

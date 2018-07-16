@@ -1,4 +1,4 @@
-const expensesReducerDefaultState = [];
+export const expensesReducerDefaultState = [];
 
 const expensesReducer = (state = expensesReducerDefaultState, action) => {
   switch (action.type) {
